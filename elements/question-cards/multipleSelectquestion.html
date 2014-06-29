@@ -1,0 +1,81 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+
+<polymer-element name="multiple-select-question" noscript>
+  <template>
+    <style>    
+      :host {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+	  .card-header {
+        margin-bottom: 10px;
+      }
+	  polyfill-next-selector { content: ".card-header h1"; }
+      .card-header ::content h2 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 300;
+      }
+	  #ul {
+	    list-style-type: none;
+	  }
+    </style>
+	
+	<div class="card-header" layout horizontal center>
+	 <content select="h1"></content>
+	</div>
+	<ul id="ul">
+	  <li id="li1">
+	    <paper-checkbox label="Loss of Co-ordination or Dexterity" id="paper_checkbox"></paper-checkbox>
+	  </li>
+	  <li id="li2">
+	    <paper-checkbox label="Weakness or Heavyness in Your Arms" id="paper_checkbox1"></paper-checkbox>
+	  </li>
+	  <li id="li3">
+	    <paper-checkbox label="Weakness or Heavyness in Your Legs" id="paper_checkbox2"></paper-checkbox>
+	  </li>
+	  <li id="li4">
+	    <paper-checkbox label="Unsteadyness or Loss of Balance" id="paper_checkbox3"></paper-checkbox>
+	  </li>
+	  <li id="li5">
+	    <paper-checkbox label="Altered or loss of sensation (eg numbness, tingling, pins and needles)" id="paper_checkbox4"></paper-checkbox>
+	  </li>
+	  <li id="li6">
+	    <paper-checkbox label="Problems with your bladder or bowel" id="paper_checkbox5"></paper-checkbox>
+	  </li>
+	  <li id="li7">
+	    <paper-checkbox label="Fatigue or lack of energy" id="paper_checkbox6"></paper-checkbox>
+	  </li>
+	  <li id="li8">
+	    <paper-checkbox label="Difficulties thinking clearly, or forgetting things" id="paper_checkbox7"></paper-checkbox>
+	  </li>
+	  <li id="li">
+	    <paper-checkbox label="Choking or coughing when eating or drinking" id="paper_checkbox8"></paper-checkbox>
+	  </li>
+	  <li id="li9">
+	    <paper-checkbox label="Muscle stiffness or spasms" id="paper_checkbox9"></paper-checkbox>
+	  </li>
+	  <li id="li10">
+	    <paper-checkbox label="Blurred, double or shaky vision" id="paper_checkbox10"></paper-checkbox>
+	  </li>
+	  <li id="li11">
+	    <paper-checkbox label="Pain" id="paper_checkbox11"></paper-checkbox>
+	  </li>
+	  <li id="li12">
+	    <paper-checkbox label="Feeling sad or down" id="paper_checkbox12"></paper-checkbox>
+	  </li>
+	  <li id="li13">
+	    <paper-checkbox label="Feeling frustrated" id="paper_checkbox13"></paper-checkbox>
+	  </li>
+	</ul>
+  </template>
+
+  <!--<script>
+
+    Polymer('my-element', {
+      
+    });
+  </script>-->
+</polymer-element>
