@@ -1,0 +1,22 @@
+{
+  "name": "SymptomTracker",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rshives/SymptomTracker",
+  "description": "A MS Symptom tracker.",
+  "main": "main-page.js",
+  "authors": [
+    "rshives"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.21",
+    "jasmine": "~2.0.1"
+  }
+}
