@@ -1,0 +1,32 @@
+{
+  "name": "SymptomTracker",
+  "version": "0.0.0",
+  "description": "A MS Symptom tracker.",
+  "main": "main-page.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rshives/SymptomTracker.git"
+  },
+  "author": "rshives",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rshives/SymptomTracker/issues"
+  },
+  "devDependencies": {
+    "bower": "~1.3.8",
+    "grunt": "~0.4.5",
+    "karma": "~0.12.19",
+    "grunt-karma": "~0.8.3",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "matchdep": "~0.3.0",
+    "karma-jasmine": "~0.1.5",
+    "requirejs": "~2.1.14",
+    "karma-requirejs": "~0.2.2",
+    "karma-chrome-launcher": "~0.1.4"
+  }
+}
