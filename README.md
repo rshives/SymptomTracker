@@ -12,4 +12,5 @@ Frameworks and languages I'll be using are:
 * [AngularJS] (https://angularjs.org/)
 * [Bootstrap] (http://getbootstrap.com/)
 * [JasmineJS] (https://github.com/pivotal/jasmine)
-
+* [GruntJS] (http://gruntjs.com/)
+* [Koding] (https://koding.com/)
