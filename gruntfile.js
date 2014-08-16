@@ -12,57 +12,57 @@ module.exports = function(grunt) {
     copy: {
       scripts: {
         files: [
-            { expand: true, src: ['app/scripts/*'], dest: 'build/scripts/', filter: 'isFile' },
-        ],
+            { expand: true, src: ['**/*.js'], cwd: 'app', dest: 'build' }
+        ]
       },
       styles: {
         files: [
-          { expand: true, src: ['app/style/*'], dest: 'build/style/', filter: 'isFile' },  
-        ],
+          { expand: true, src: ['**/*.css'], cwd: 'app', dest: 'build' }  
+        ]
       },
       view: {
         files: [
-          { src: 'app/index.html', dest: 'build/app.html' },  
-        ],
+          { expand: true, src: 'index.html', cwd: 'app', dest: 'build/app.html' }  
+        ]
       },
     },
     connect: {
       server: {
         options: {
-          port: 8000,
-        },
-      },
+          port: 8000
+        }
+      }
     },
     watch: {
       scripts: {
         files: ['app/scripts/*',],
         tasks: ['jshint:scripts', 'copy:scripts'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       styles: {
         files: ['app/style/*'],
         tasks: ['copy:styles'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       view: {
         files: ['app/index.html'],
         tasks: ['copy:view'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       test: {
         files: ['test/unit/spec/*'],
         tasks: ['jshint:test'],
         options: {
-          spawn: false,
-        },
-      },
-    },
+          spawn: false
+        }
+      }
+    }
     
   });
   

@@ -1,8 +1,8 @@
-/** app/scripts/app.js */
+/** scripts/app.js */
 
 var symptomTrackerApp = angular.module('symptomTrackerApp', [])
 
-.controller('linkCtrl', function($scope) {
+.controller('linkCtrl', function ($scope) {
   $scope.links = [
     {'address': 'http://www.candrsolutions.net/resume.html', 'desc': 'My Resume'},
     {'address': 'http://www.google.com/', 'desc': 'Google'},
