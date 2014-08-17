@@ -4,13 +4,13 @@
 
 A web application to help my wife track her MS symptoms.
 I am currently porting from a Python GAE applicaton to a modern SPA web applicaton. 
+I am using a Chromebook exclusively, specifically the Toshiba CB35 Chromebook.
 
 Frameworks and languages I'll be using are:
 * HTML
 * JavaScript
 * CSS
-* [AngularJS] (https://angularjs.org/)
+* [BackboneJS] (https://backbonejs.org/)
 * [Bootstrap] (http://getbootstrap.com/)
 * [JasmineJS] (https://github.com/pivotal/jasmine)
 * [GruntJS] (http://gruntjs.com/)
-* [Koding] (https://koding.com/)
