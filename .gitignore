@@ -4,4 +4,5 @@ node_modules/
 npm-debug.log
 app/.index.html.swp
 build/
+bower_components/
 
