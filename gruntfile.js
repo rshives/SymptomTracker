@@ -12,19 +12,31 @@ module.exports = function(grunt) {
     copy: {
       scripts: {
         files: [
-            { expand: true, src: ['**/*.js'], cwd: 'app', dest: 'build' }
+            { expand: true, src: ['scripts/**/*.js'], cwd: 'app', dest: 'build' }
         ]
       },
       styles: {
         files: [
-          { expand: true, src: ['**/*.css'], cwd: 'app', dest: 'build' }  
+          { expand: true, src: ['style/**/*.css'], cwd: 'app', dest: 'build' }  
         ]
       },
       view: {
         files: [
-          { expand: true, src: 'index.html', cwd: 'app', dest: 'build/app.html' }  
+          { expand: true, src: 'index.html', cwd: 'app', dest: 'build' }  
+        ],
+      },
+      rename: {
+        files: [
+          { expand: true, src: '{,*/}*.html', cwd: 'build', dest: 'build/',
+            rename: function (dest, src) {
+              return dest + src.replace('index', 'app');
+            }
+          }
         ]
       },
+    },
+    clean: {
+      build: [ 'build/index.html' ]
     },
     connect: {
       server: {
@@ -50,7 +62,7 @@ module.exports = function(grunt) {
       },
       view: {
         files: ['app/index.html'],
-        tasks: ['copy:view'],
+        tasks: ['copy:view', 'copy:rename', 'clean:build'],
         options: {
           spawn: false
         }
@@ -66,5 +78,5 @@ module.exports = function(grunt) {
     
   });
   
-  grunt.registerTask('default', ['jshint:all', 'connect', 'watch',]);
+  grunt.registerTask('default', ['jshint:all', 'copy', 'clean:build', 'connect', 'watch',]);
 };

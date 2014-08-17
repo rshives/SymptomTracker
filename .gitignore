@@ -1,3 +1,7 @@
 .project
 .metadata/
 node_modules/
+npm-debug.log
+app/.index.html.swp
+build/*
+

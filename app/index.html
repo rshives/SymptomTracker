@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html lang="eng" ng-app="symptomTrackerApp">
+<html lang="eng">
 	<head>
 		<title>C and R Solutions Symptom Tracker</title>
 		<link href="style/bootstrap.css" rel="stylesheet">
 		<link href="style/outlooksummary.css" rel="stylesheet">
-		<link rel="shortcut icon" type="image/png" href="../test/lib/jasmine-2.0.1/jasmine_favicon.png">
-    <link rel="stylesheet" type="text/css" href="../test/lib/jasmine-2.0.1/jasmine.css"> 
 		<script type="text/javascript" src="scripts/main-page.js"></script>
 		
 	</head>
@@ -15,7 +13,7 @@
 				<a href="#"><img src="images/candrsolutionsblue.gif" alt="Banner" border=0/></a>
 				<br/>
 				<br/>
-				<p>Hello douchebag. I'm porting to {{ 'angular' + '!' }}</p>
+				<p>Hello douchebag. I'm porting to ampersand.js.</p>
 				<ul id="headNav">
 					<li><input type="button" class="navButton" id="btnStore" value="Store It" onclick="storeData();" /></li>
 					<li>|</li>
@@ -33,9 +31,9 @@
 					<p>This is the my MS Symptom Diary.  I can check off symptoms on a daily basis and store them on the server.  Whenever I want to I can create reports based on the data.</p>
 		
 					<h2>Links</h2>
-					<ul id="links" ng-controller="linkCtrl">
-						<li ng-repeat="link in links">
-						  <p>{{ link.address }} {{ link.desc }}</p>
+					<ul id="links">
+						<li >
+						  <p></p>
 						</li>
 					</ul>
 				</div>
