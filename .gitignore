@@ -2,4 +2,5 @@
 .metadata/
 node_modules/
 build/
+bower-components/
 
