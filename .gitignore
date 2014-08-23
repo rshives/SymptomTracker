@@ -1,2 +1,5 @@
 .project
 .metadata/
+node_modules/
+build/
+
