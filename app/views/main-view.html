@@ -1,0 +1,34 @@
+<div id="main-body">
+  <div id="info">
+    <h2>Info</h2>
+    <p>This is the my MS Symptom Diary.  I can check off symptoms on a daily basis and store them on the server.  Whenever I want to I can create reports based on the data.</p>
+		
+		<h2>Links</h2>
+		<ul id="links" ng-controller="linkCtrl">
+	  	<li ng-repeat="link in links">
+		    <p>{{ link.address }} {{ link.desc }}</p>
+		  </li>
+		</ul>
+  </div>
+				
+  <div id="content">
+		<div id="contentSections">
+		  <div id="Q1">
+		    <h2>Did you have any of the following symptoms today as a result of your MS? Please indicate Yes by checking the box.</h2>
+		    <input type="checkbox" class="symptom" id="symp1" name="symp1" value="locd">Loss of Co-ordination or Dexterity</input><br/>
+		    <input type="checkbox" class="symptom" id="symp2" name="symp2" value="whArms">Weakness or Heavyness in Your Arms</input><br/>
+		    <input type="checkbox" class="symptom" id="symp3" name="symp3" value="whLegs">Weakness or Heavyness in Your Legs</input><br/>
+		    <input type="checkbox" class="symptom" id="symp4" name="symp4" value="ulBal">Unsteadyness or Loss of Balance</input><br/>
+		    <input type="checkbox" class="symptom" id="symp5" name="symp5" value="numbTing">Altered or loss of sensation (eg numbness, tingling, pins and needles)</input><br/>
+		    <input type="checkbox" class="symptom" id="symp6" name="symp6" value="bladBowel">Problems with your bladder or bowel</input><br/>
+		    <input type="checkbox" class="symptom" id="symp7" name="symp7" value="Fatigue">Fatigue or lack of energy</input><br/>
+		    <input type="checkbox" class="symptom" id="symp8" name="symp8" value="cogForget">Difficulties thinking clearly, or forgetting things</input><br/>
+		    <input type="checkbox" class="symptom" id="symp9" name="symp9" value="chokeCough">Choking or coughing when eating or drinking</input><br/>
+		    <input type="checkbox" class="symptom" id="symp10" name="symp10" value="stiffSpasm">Muscle stiffness or spasms</input><br/>
+		    <input type="checkbox" class="symptom" id="symp11" name="symp11" value="vision">Blurred, double or shaky vision</input><br/>
+		    <input type="checkbox" class="symptom" id="symp12" name="symp12" value="pain">Pain</input><br/>
+		    <input type="checkbox" class="symptom" id="symp13" name="symp13" value="sad">Feeling sad or down</input><br/>
+		    <input type="checkbox" class="symptom" id="symp14" name="symp14" value="frustrated">Feeling frustrated</input><br/>
+    </div>
+  </div>
+</div>	
