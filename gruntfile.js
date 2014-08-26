@@ -12,59 +12,77 @@ module.exports = function(grunt) {
     copy: {
       scripts: {
         files: [
-            { expand: true, src: ['app/scripts/*'], dest: 'build/scripts/', filter: 'isFile' },
-        ],
+            { expand: true, src: ['*.js'], dest: 'build/scripts/', cwd: 'app/scripts/' }
+        ]
       },
       styles: {
         files: [
-          { expand: true, src: ['app/style/*'], dest: 'build/style/', filter: 'isFile' },  
-        ],
+          { expand: true, src: ['*'], dest: 'build/style/', cwd: 'app/style/' }  
+        ]
       },
       view: {
         files: [
-          { src: 'app/index.html', dest: 'build/app.html' },  
-        ],
+          { expand: true, src: ['index.html'], dest: 'build/', cwd: 'app/', 
+          rename: function(dest, src) {
+            return dest + src.replace('index', 'app');
+          }
+        }]
       },
+      templates: {
+        files: [
+          { expand: true, src: '*.html', dest: 'build/views/', cwd: 'app/views/' }
+        ]
+      }
+    },
+    clean: {
+      build: [ 'build/index.html' ]
     },
     connect: {
       server: {
         options: {
-          port: 8000,
-        },
-      },
+          port: 8000
+        }
+      }
     },
     watch: {
       scripts: {
         files: ['app/scripts/*',],
         tasks: ['jshint:scripts', 'copy:scripts'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       styles: {
         files: ['app/style/*'],
         tasks: ['copy:styles'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
       },
       view: {
         files: ['app/index.html'],
-        tasks: ['copy:view'],
+        tasks: ['copy:view'], // , 'clean'],
         options: {
-          spawn: false,
-        },
+          spawn: false
+        }
+      },
+      templates: {
+        files: ['app/views/*.html'],
+        tasks: ['copy:templates'],
+        options: {
+          spawn: false
+        }
       },
       test: {
         files: ['test/unit/spec/*'],
         tasks: ['jshint:test'],
         options: {
-          spawn: false,
-        },
-      },
-    },
+          spawn: false
+        }
+      }
+    }
     
   });
   
-  grunt.registerTask('default', ['jshint:all', 'connect', 'watch',]);
+  grunt.registerTask('default', ['jshint:all', 'copy', /*'clean',*/ 'connect', 'watch',]);
 };
