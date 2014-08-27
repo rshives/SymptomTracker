@@ -7,7 +7,8 @@ module.exports = function(grunt) {
     jshint: {
       scripts: ['app/scripts/app.js'],
       test: ['test/unit/spec/controllersSpec.js'],
-      all: ['app/scripts/app.js', 'test/unit/spec/controllersSpec.js']
+      patterns: ['lib/design/scripts/visual-patterns.js'],
+      all: ['app/scripts/app.js', 'test/unit/spec/controllersSpec.js', 'lib/design/scripts/visual-patterns.js']
     },
     copy: {
       scripts: {
@@ -48,6 +49,13 @@ module.exports = function(grunt) {
       scripts: {
         files: ['app/scripts/*',],
         tasks: ['jshint:scripts', 'copy:scripts'],
+        options: {
+          spawn: false
+        }
+      },
+      patterns: {
+        files: ['lib/design/scripts/visual-patterns.js'],
+        tasks: ['jshint:patterns'],
         options: {
           spawn: false
         }

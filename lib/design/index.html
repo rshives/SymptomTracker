@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='stdpl'>
+  <head>
+    <title>Symptom Tracker Design Pattern Library</title>
+    <link href='styles/bootstrap.css' rel='stylesheet'>
+    <link href='styles/outlooksummary.css' rel='stylesheet'>
+
+  </head>
+  <body>
+    <heading>
+      <h1>Visual Design Patterns for Symptom Tracker</h1> 
+    </heading>
+
+    <div class='container' id='section-links'>
+      <ng-include src="'views/section-links.html'"></ng-include>
+    </div>
+
+    <section class='container' id='content'>
+      <ng-include src="'views/general-pattern-titles.html'"></ng-include>
+      <ng-include src="'views/general-pattern-content.html'"></ng-include>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script src='../../components/jquery.js'></script>
+    <script src='../../components/bootstrap.js'></script>
+    <script src='../../components/angular.js'></script>
+    <script src='scripts/visual-patterns.js'></script>
+  </body>
+</html>
