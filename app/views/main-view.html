@@ -1,11 +1,12 @@
+<script id="main-body" type="text/x-handlebars-template">
 <div id="main-body">
   <div id="info">
     <h2>Info</h2>
     <p>This is the my MS Symptom Diary.  I can check off symptoms on a daily basis and store them on the server.  Whenever I want to I can create reports based on the data.</p>
 		
 		<h2>Links</h2>
-		<ul id="links" ng-controller="linkCtrl">
-	  	<li ng-repeat="link in links">
+		<ul id="links">
+      <li>
 		    <p>{{ link.address }} {{ link.desc }}</p>
 		  </li>
 		</ul>
@@ -31,4 +32,5 @@
 		    <input type="checkbox" class="symptom" id="symp14" name="symp14" value="frustrated">Feeling frustrated</input><br/>
     </div>
   </div>
-</div>	
+</div>
+</script>

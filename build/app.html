@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng" ng-app="symptomTrackerApp">
+<html lang="eng" >
 	<head>
 		<title>C and R Solutions Symptom Tracker</title>
 		<link href="style/bootstrap.css" rel="stylesheet">
@@ -12,7 +12,7 @@
 			<a href="#"><img src="images/candrsolutionsblue.gif" alt="Banner" border=0/></a>
 			<br/>
 			<br/>
-			<p>Hello douchebag. I'm porting to {{ 'angular' + '!' }}</p>
+			<p>Hello douchebag. I'm using javascript </p>
 			<ul id="headNav">
 				<li><input type="button" class="navButton" id="btnStore" value="Store It" onclick="storeData();" /></li>
 				<li>|</li>
@@ -24,12 +24,13 @@
 			</ul>
 		</div>
 
-    <ng-include src="'views/main-view.html'"></ng-include>
+    <div class="container">
+    </div>
 
 		<script src="../components/jquery.js"></script>
 		<script src="../components/bootstrap.js"></script>
-		<script src="../components/angular.js"></script>
-		<script type="text/javascript" src="scripts/main-page.js"></script>
+    <script src="../components/handlebars-v2.0.0.js"></script>
+		<script src="scripts/main-page.js"></script>
     <script src="scripts/app.js"></script>
 		
 		

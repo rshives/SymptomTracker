@@ -6,9 +6,9 @@ module.exports = function(grunt) {
     
     jshint: {
       scripts: ['app/scripts/app.js'],
-      test: ['test/unit/spec/controllersSpec.js'],
+      test: ['test/unit/spec/*Spec.js'],
       patterns: ['lib/design/scripts/visual-patterns.js'],
-      all: ['app/scripts/app.js', 'test/unit/spec/controllersSpec.js', 'lib/design/scripts/visual-patterns.js']
+      all: ['app/scripts/app.js', 'test/unit/spec/*Spec.js', 'lib/design/scripts/visual-patterns.js']
     },
     copy: {
       scripts: {
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       },
       view: {
         files: ['app/index.html'],
-        tasks: ['copy:view'], // , 'clean'],
+        tasks: ['copy:view', 'clean'],
         options: {
           spawn: false
         }
@@ -92,5 +92,5 @@ module.exports = function(grunt) {
     
   });
   
-  grunt.registerTask('default', ['jshint:all', 'copy', /*'clean',*/ 'connect', 'watch',]);
+  grunt.registerTask('default', ['jshint:all', 'copy', 'clean', 'connect', 'watch',]);
 };

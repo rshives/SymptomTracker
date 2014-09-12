@@ -1,12 +1,13 @@
 /** app/scripts/app.js */
+$(function () {
+  $(".container").append("<p>Test Html</p>");
 
-var symptomTrackerApp = angular.module('symptomTrackerApp', [])
-
-.controller('linkCtrl', function($scope) {
-  $scope.links = [
-    {address: 'http://rshives.github.io', desc: 'My Resume'},
-    {address: 'http://www.google.com/', desc: 'Google'},
-    {address: 'http://richards-ramblings.blogspot.com/', desc: 'My Blog'},
-    {address: 'http://www.books24x7.com/login.asp?ic=0', desc: 'Books 24x7'},
-  ];
+  try {
+    var main_page = $("#main-page").html();
+    var main_template = Handlebars.compile(main_page);
+    var main_html = template(main_template);
+  }
+  catch(err) {
+    console.log(err.message);
+  }
 });
