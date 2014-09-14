@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "homepage": "https://github.com/rshives/SymptomTracker",
   "description": "A MS Symptom tracker.",
-  "main": "main-page.js",
+  "main": "app.js",
   "authors": [
     "rshives"
   ],
@@ -19,5 +19,11 @@
     "angular": "~1.2.21",
     "jasmine": "~2.0.1",
     "angular-mocks": "~1.2.21"
+  },
+  "moduleType": [
+    "amd"
+  ],
+  "dependencies": {
+    "ember-data": "~0.0.14"
   }
 }
