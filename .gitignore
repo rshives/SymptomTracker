@@ -2,5 +2,6 @@
 .metadata/
 node_modules/
 build/
+components/
 bower-components/
 
