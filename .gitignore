@@ -3,5 +3,5 @@
 node_modules/
 build/
 components/
-bower-components/
+bower_components/
 
